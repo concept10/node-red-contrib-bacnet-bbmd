@@ -1,5 +1,7 @@
 # node-red-contrib-bacnet-bbmd
 
+## ATTENTION: This module has not been fully tested. Please test before using in production environments.  
+
 A Node-RED node for BACnet BBMD.
 
 ## Installation
