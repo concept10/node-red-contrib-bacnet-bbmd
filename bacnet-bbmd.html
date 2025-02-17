@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    RED.nodes.registerType('bacnet-bbmd', {
+        category: 'BACnet',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value: ''},
+            broadcastAddress: {value: '192.168.10.255'},
+            port: {value: 47808},
+            bdt: {value: '[]'},
+            fdt: {value: '[]'},
+            bbmdPort: {value: 47809},
+            broadcastMask: {value: '192.168.1.0/24'},
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: 'file.png',
+        label: function() {
+            return this.name || 'bacnet-bbmd';
+        },
+        oneditprepare: function() {
+            // Code to execute when the edit dialog is prepared
+        },
+        oneditsave: function() {
+            // Code to execute when the edit dialog is saved
+        }
+    });
+</script>
+
+<div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+</div>
+<div class="form-row">
+    <label for="node-input-broadcastAddress"><i class="icon-wifi"></i> Broadcast Address</label>
+    <input type="text" id="node-input-broadcastAddress" placeholder="192.168.10.255">
+</div>
+<div class="form-row">
+    <label for="node-input-port"><i class="icon-wifi"></i> Port</label>
+    <input type="number" id="node-input-port" placeholder="47808">
+</div>
+<div class="form-row">
+    <label for="node-input-bdt"><i class="icon-wifi"></i> Broadcast Distribution Table (BDT)</label>
+    <input type="text" id="node-input-bdt" placeholder="[]">
+</div>
+<div class="form-row">
+    <label for="node-input-fdt"><i class="icon-wifi"></i> Foreign Devices Table (FDT)</label>
+    <input type="text" id="node-input-fdt" placeholder="[]">
+</div>
+<div class="form-row">
+    <label for="node-input-bbmdPort"><i class="icon-wifi"></i> BBMD Port</label>
+    <input type="number" id="node-input-bbmdPort" placeholder="47809">
+</div>
+<div class="form-row">
+    <label for="node-input-broadcastMask"><i class="icon-wifi"></i> Broadcast Mask</label>
+    <input type="text" id="node-input-broadcastMask" placeholder="192.168.1.0/24">
+</div>
